@@ -1,0 +1,63 @@
+.on-off-switch{
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+    user-select:none;
+}
+
+.on-off-switch-track{
+    position:absolute;
+    z-index:1;
+    overflow:hidden;
+}
+
+/* semi transparent white overlay */
+.on-off-switch-track-white{
+    position:absolute;
+    opacity:0.2;
+    z-index:30;
+}
+/* Track for "on" state */
+.on-off-switch-track-on{
+    position:absolute;
+    z-index:10;
+    overflow:hidden;
+}
+/* Track for "off" state */
+.on-off-switch-track-off{
+    position:absolute;
+    z-index:1;
+}
+
+.on-off-switch-thumb{
+    position:absolute;
+    z-index:2;
+    overflow:hidden;
+    margin-left: 2px;
+}
+
+.on-off-switch-thumb-shadow{
+    opacity:0.5;
+    position:absolute;
+}
+
+.track-on-gradient, .track-off-gradient{
+    position:absolute;
+    width:100%;
+    height:5px;
+}
+
+.on-off-switch-thumb-color{
+    background-color:@link-color;
+    position:absolute;
+}
+
+.on-off-switch-thumb-off{
+    position:absolute;
+}
+.on-off-switch-thumb-on{
+    z-index:10;
+}
+.on-off-switch-text{
+    display: none;
+}

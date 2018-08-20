@@ -1,0 +1,57 @@
+/* - - - - - - - - - - - - main styles - - - - - - - - - - - - */
+html {
+    font-size: 16px;
+}
+
+html,
+body {
+}
+
+body {
+    font-size: 0.875rem;
+    font-family: "Montserrat", sans-serif;
+    background: @main-bg;
+    color: @main-color;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+a {
+    color: @link-color;
+}
+
+.wrapper {
+    flex: 1 1 auto;
+    display: flex;
+    min-width: 1280px;
+}
+.content-wrap {
+    background: @content-bg;
+    flex-grow: 1;
+    min-height: ~"calc(100vh - 160px)";
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    padding: 31px 30px 30px;
+    flex-grow: 1;
+}
+
+
+
