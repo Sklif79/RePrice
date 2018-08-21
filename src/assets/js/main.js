@@ -11,6 +11,7 @@ $(document).ready(function () {
     removeTag();
     filterToggle();
     competitionItem();
+    categoryTable();
 
     //для реинита кастомных чекбоксов - вставь вызов этой функции в аякс
     checkedInput();
@@ -24,6 +25,7 @@ $(document).ready(function () {
         setScrollHeight();
     });
 
+    //popup switchers
     new DG.OnOffSwitch({
         el: '#details-is-active',
         width: 28,
@@ -325,5 +327,20 @@ function competitionItem() {
 
     $(document).on('click', '.js_competitor-details__add', function () {
         $(this).closest('.competitor-details-add').find('.competitor-details-add-content').slideDown(100);
+    });
+}
+
+function categoryTable() {
+    $('.table-category-main table').closest('tr').addClass('table-subcategory').prev('tr').addClass('table-category-parent');
+
+    $('.table-category-parent').each(function () {
+        $btn = $("<div/>", {
+            "class": "table-subcategory__btn",
+            click: function () {
+                $(this).closest('.table-category-parent').toggleClass('active').next('.table-subcategory').toggleClass('open');
+            }
+        });
+
+        $(this).find('td:first-of-type').prepend($btn);
     });
 }

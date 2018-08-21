@@ -134,11 +134,13 @@ gulp.task('browserSync', function () {
             baseDir: "./build"
         },
         // index: 'cena-ezmencen-filter.html',
+        // index: 'index-page.html',
         // index: 'cena-tovar.html',
         // index: 'cena-brands.html',
         // index: 'cena-concurent.html',
         // index: 'cena-add-tovar.html',
-        index: 'cena-pereocenka.html',
+        // index: 'cena-pereocenka.html',
+        index: 'cena-categorii.html',
 
         port: 8080,
         open: true,

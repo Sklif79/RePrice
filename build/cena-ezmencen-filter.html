@@ -420,6 +420,34 @@
 
         <div class="popup-side-wrap">
             <!---->
+            <div class="popup popup-side" id="popup-add-category">
+                <div class="popup-close"></div>
+                <div class="popup-side__title">Добавить категорию</div>
+        
+                <form name="" action="" method="post" class="popup-form">
+                    <div class="form-field">
+                        <div class="form-field__title">Название категории</div>
+                        <input type="text" class="form-field__input-text">
+                    </div>
+        
+                    <div class="form-field">
+                        <div class="form-field__title">Родительская рубрика</div>
+                        <select class="js_custom-select" name="select-weight">
+                            <option value="Родительская 1">Родительская 1</option>
+                            <option value="Родительская 2">Родительская 2</option>
+                            <option value="Родительская 3">Родительская 3</option>
+                            <option value="Родительская 4">Родительская 4</option>
+                        </select>
+                    </div>
+        
+                    <div class="popup-form-btns">
+                        <input type="submit" class="action-btn" value="Сохранить">
+                        <input type="reset" class="cancel-btn" value="Удалить">
+                    </div>
+                </form>
+            </div>
+        
+            <!---->
             <div class="popup popup-side" id="popup-reprice-item">
                 <div class="popup-close"></div>
         
@@ -532,23 +560,85 @@
         
                 <div class="tabs-wrap">
                     <div class="tabs">
-                        <span data-id="competitor-details" class="tab active">Детали</span>
-                        <span data-id="competitor-compare" class="tab">Сравниваемые товары</span>
+                        <span data-id="products-details" class="tab active">Детали</span>
+                        <span data-id="products-market" class="tab">Рынок</span>
                     </div>
         
                     <div class="panels scroll-pane ">
-                        <div data-id="competitor-details" class="panel active">
-                            <div>Eddard</div>
+                        <div data-id="products-details" class="panel active">
+                            <div class="form-field">
+                                <div class="form-field__title">Название</div>
+                                <div class="form-field__value">Краска Caparol SFD</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-field__title">Aртикул</div>
+                                <div class="form-field__value">12131321</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-field__title">Бренд</div>
+                                <div class="form-field__value">Bosch</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-field__title">Категория</div>
+                                <div class="form-field__value"><span>Техника</span><span>Крупногабаритная</span></div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-field__title">Вес</div>
+                                <div class="form-field__value">10 кг</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="form-field__title">Цвет</div>
+                                <div class="form-field__value">Бесцветный</div>
+                            </div>
+                            <div class="form-field">
+                                <div class="tags-field">
+                                    <div class="tags-field__item">item1<input class="tags-field__item" type="hidden"
+                                                                              name="item1" value="item1">
+                                        <div class="tags-field__item-close"></div>
+                                    </div>
+                                    <div class="tags-field__item">item2<input class="tags-field__item" type="hidden"
+                                                                              name="item2" value="item2">
+                                        <div class="tags-field__item-close"></div>
+                                    </div>
+                                    <div class="tags-field__item">item3<input class="tags-field__item" type="hidden"
+                                                                              name="item3" value="item3">
+                                        <div class="tags-field__item-close"></div>
+                                    </div>
+                                </div>
+                                <div class="form-field__title">Добавить тег</div>
+                                <input type="text" name="" class="form-field__input-text js_add-tag">
+                            </div>
                         </div>
-                        <div data-id="competitor-compare" class="panel">
-                            <ul class="popup-add-competitor__list">
-                                <li><a href="#">Краска капарол</a></li>
-                                <li><a href="#">Вентиляция</a></li>
-                                <li><a href="#">Краска капарол</a></li>
-                                <li><a href="#">Вентиляция</a></li>
-                                <li><a href="#">Краска капарол</a></li>
-                                <li><a href="#">Вентиляция</a></li>
-                            </ul>
+                        <div data-id="products-market" class="panel">
+                            <div class="products-market__graph block-bordered" style="height: 293px"></div>
+                            <div class="popup-side__title products-market__title">Рыночные цены</div>
+        
+                            <table class="table products-market-table">
+                                <tr>
+                                    <th>Название</th>
+                                    <th>Давность</th>
+                                    <th>Цена</th>
+                                    <th>% к нашей цене</th>
+                                </tr>
+                                <tr>
+                                    <td>Название 1</td>
+                                    <td>7 часов</td>
+                                    <td>642 р.</td>
+                                    <td><div class="theme_green">12%</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Название 2</td>
+                                    <td>7 часов</td>
+                                    <td>642 р.</td>
+                                    <td><div class="theme_red">7%</div></td>
+                                </tr>
+                                <tr>
+                                    <td>Название 1</td>
+                                    <td>7 часов</td>
+                                    <td>642 р.</td>
+                                    <td><div class="theme_green">12%</div></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
